@@ -17,7 +17,7 @@ args = parser.parse_args()
 
 movies = glob.glob(args.movies)
 for movie_file in movies:
-    print('load movie: {}'.format(movie_file))
+    print('Loading movie: {}'.format(movie_file))
     if not os.path.isfile(movie_file):
         raise FileNotFoundError('Not found the movie.')
     movie = cv2.VideoCapture(movie_file)
